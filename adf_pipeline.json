@@ -1,0 +1,36 @@
+{
+    "name": "CopyStudentData",
+    "properties": {
+        "activities": [
+            {
+                "name": "CopyData",
+                "type": "Copy",
+                "inputs": [
+                    {
+                        "referenceName": "BlobStudentDataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "SQLStudentDataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource",
+                        "formatSettings": {
+                            "type": "TextFormat",
+                            "columnDelimiter": ",",
+                            "rowDelimiter": "\n"
+                        }
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                }
+            }
+        ]
+    }
+}
