@@ -129,5 +129,3 @@ SELECT Country, COUNT(*) AS StudentCount FROM Students GROUP BY Country;
 ## Conclusion
 This project provides hands-on experience in building an ETL pipeline in Azure. It involves cloud storage, database management, and automated data processing using **Azure Data Factory**.
 
-🚀 Happy Learning!
-
